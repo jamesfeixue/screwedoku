@@ -1,5 +1,8 @@
 require_relative "board"
 
+# /Users/appacademy/Desktop/w1d4/screwedoku/board.rb:31:in `[]':
+# no implicit conversion from nil to integer (TypeError)
+
 class SudokuGame
   def self.from_file(filename)
     board = Board.from_file(filename)
@@ -48,9 +51,9 @@ class SudokuGame
 
   def play_turn
     board.render
-    val = get_pos
-    pos = get_val
-    board[pos] = val
+    pos = get_pos
+    val = get_val
+    board[pos] = val 
   end
 
   def run
